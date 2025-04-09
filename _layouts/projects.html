@@ -7,13 +7,14 @@ layout: default
   <div class="dashed"></div>
 {% endif %}
 
-<h1>{{ site.theme_config.title_publications }}</h1>
+<h1>{{ site.theme_config.home.title_projects }}</h1>
 
 </header>
 
 {{ content }}
 
-{% include vertical_list.html collection=site.data.home.publication_entries %}
+<h2>{{ site.theme_config.home.title_projects }}</h2>
+{% include card_list.html collection=site.data.home.project_entries %}
 
 {% if site.theme_config.show_footer == true %}
   <footer>
