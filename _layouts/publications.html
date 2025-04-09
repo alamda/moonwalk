@@ -7,22 +7,13 @@ layout: default
   <div class="dashed"></div>
 {% endif %}
 
-  <h1>{{ site.title }}</h1>
-  {% if site.theme_config.show_description == true %}
-    <p>{{ site.description }}</p>
-  {% endif %}
+<h1>{{ site.theme_config.title_publications }}</h1>
+
 </header>
 
 {{ content }}
 
-<a href="{{ "/" | relative_url }}">{{ site.theme_config.back_home_text }}</a>
-
-<header>
-  <h1>{{ site.title }}</h1>
-</header>
-
 {% if site.theme_config.show_publications == true %}
-  <h2>{{ site.theme_config.home.title_publications }}</h2>
   {% include vertical_list.html collection=site.data.home.publication_entries %}
 {% endif %}
 
